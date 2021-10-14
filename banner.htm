@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{box-sizing: border-box; overflow: hidden;}
+        body {margin: 0;}
+        #banner { border: 1px solid black; width: 900px; height: 450px;position: relative; background: rgb(4, 4, 5); }
+
+        #bg { 
+                position: absolute;
+                width: 900px;
+                height: 450px; 
+                background: url('img/bg.gif');
+                animation-duration: 25s;
+                animation-delay: 2s;
+                animation-name: bg;
+                opacity: 0;
+            }
+            #bg3{
+                position: absolute;
+                width: 900px;
+                height: 450px; 
+                background: url('img/bg3.jpg') center/cover ;
+                animation-delay: 13s;
+                animation-duration: 10s;                
+                animation-name: bg3;
+                opacity: 0;
+                z-index: 5;
+            }
+            #prijok {
+                position: absolute;
+                width: 900px;
+                height: 450px; 
+                background: url('img/prijok.gif')  ;
+                animation-delay: 23s;
+                animation-duration: 8s;                
+                animation-name: prijok;
+                opacity: 0; 
+                z-index: 4;
+            }
+             @keyframes prijok {
+                from{ opacity: 1; } 
+                to { opacity: 1; }
+             }
+            @keyframes bg3 {
+                from{ opacity: 0; } 
+                to { opacity: 1; }
+                50% { opacity: 1;}          
+                100% { opacity: 0;}
+            }
+                @keyframes bg {
+                from{ opacity: 0; } 
+                to { opacity: 1; }
+            }
+            @keyframes deathstar {
+                from { top: -10%; right: -500px; }
+                to { top: 20%; right: 30px;  }
+                0% {opacity: 1;}                
+                40% {opacity:1;}
+                98% {opacity: .8;}
+                99% {opacity: .3;}                
+                100% {opacity: 0;}                
+            } 
+            @keyframes x-wing2 {
+                from { left: -200px; top: 20px; width: 5%; }
+                to { left: 900px;top: 700px; width:60%; }
+            } 
+            @keyframes starf {
+                from { left: -200px; top: 20px; width: 5%; }
+                to { left: 900px;top: 700px; width:60%; }
+
+            }    
+            @keyframes sw {
+                from { width: 100%; opacity: 1;  }
+                to {  width:10%; }
+                50% { opacity: 1; }
+                95% { opacity: 1; }
+                100% { opacity: 0; }
+            } 
+            @keyframes text-div {
+                from { left:0;bottom:-1000px;width: 120%; }
+                50% { opacity: 1;}
+                80% { opacity: 0;}
+                100% { opacity: 0;}
+                to { left: 45%; bottom:250px; width: 10%; }
+            }  
+            @keyframes darkr{
+                from { bottom: -500px;}
+                to { bottom: 0;}
+            }
+            @keyframes jedil{
+                from { top: -500px ;}
+                to { top: 0;}
+            }
+            #text-div {
+                position: absolute;
+                transform: rotateX(50deg);
+                transform-style: preserve-3d;
+                bottom: -1000px;
+                left: 0;
+                animation-delay: 3s;
+                animation: text-div 18s ;
+                width: 120%;
+                z-index: 2;
+            }         
+        #deathstar {
+            width: 40%;
+            position: absolute;
+            right: -500px;
+            top: -10%;
+            animation: deathstar ;
+            animation-delay: 3s;
+            animation-duration:  11s;
+            animation-fill-mode: backwards;
+            z-index: 1;
+        } 
+        #starf {
+            width: 20%;
+            position: absolute;
+            top: 20px;
+            left: -400px;
+            animation: starf 10s ;
+            animation-delay: 10s;
+            animation-fill-mode: forwards;
+            z-index: 3;
+        }        
+        #x-wing2 {
+            width: 20%;
+            position: absolute;
+            top: 20px;
+            left: -400px;
+            animation: x-wing2 9s ;
+            animation-delay: 9s;
+            animation-fill-mode: forwards;
+            z-index: 3;
+        }         
+        #sw {
+            width: 20%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%,-50%);
+            animation: sw 9s ;
+            animation-delay:0;
+            animation-fill-mode: forwards;
+            z-index: 3;
+        } 
+        #jedil {
+            width: 48%;
+            position: absolute;
+            left: 0;
+            top: -500px;
+            animation-delay:30s;
+            animation-duration: 4s;
+            animation-name: jedil;
+            animation-fill-mode: forwards;
+            z-index: 4;
+        } 
+        #darkr {
+            width: 50%;
+            position: absolute;
+            bottom: -500px;
+            left: 50%;
+            animation-delay:30s;
+            animation-duration: 4s;
+            animation-name: darkr;
+            animation-fill-mode: forwards;
+            z-index: 4;
+        } 
+    </style>
+</head>
+<body>
+    <div id="banner">     
+        <div id="bg"></div>
+            <div><img src="img/sw.png" id="sw" alt=""></div> 
+            <div ><img src="img/text.png" id="text-div" alt="1" /></div>           
+            <div><img src="img/starf.png" id="starf" alt="sdfs"/></div>            
+            <div><img src="img/x-wing2.png" id="x-wing2" alt="sdfs"/></div>
+            <div><img src="img/deathstar.png" id="deathstar" alt="123" /> </div>
+            <div><img src="img/bg3.jpg" id="bg3" /></div>
+            <div><img src="img/prijok.gif" id="prijok" /></div>
+            <div><img src="img/jedi.jpg" id="jedil" alt="sdfs"/></div>            
+            <div><img src="img/dark.jpg" id="darkr" alt="sdfs"/></div>
+        </div>   
+    </div>  
+</body>
+</html>
